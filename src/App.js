@@ -19,12 +19,12 @@ function App() {
       .catch(err => console.log(err))
   };
 
+  
   const students = Object.values(data)[0]
-  console.log(students)
 
   return (
     <main>
-      <p>Hellow World</p>
+      <StudentsView students={students} />
     </main>
   );
 }
