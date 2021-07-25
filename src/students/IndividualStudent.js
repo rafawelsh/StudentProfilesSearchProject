@@ -1,4 +1,5 @@
 import React from 'react'
+import './IndividualStudents.css'
 
 function IndividualStudent(student) {
     if (!student.student) return null
@@ -12,13 +13,15 @@ function IndividualStudent(student) {
     }, 0)
 
     return (
-        <div key={id}>
-            <img src={pic} alt='students from class' />
-            <h2>{firstName} {lastName}</h2>
-            <p>Email: {email}</p>
-            <p>Comapany: {company}</p>
-            <p>Skill: {skill}</p>
-            <p>Average: {avgGrades}%</p>
+        <div className="studentCard">
+            <img src={pic} alt='students from class' height='150px' width='150px'/>
+            <div className="studentCardInfo">
+                <h1>{firstName.toUpperCase()} {lastName.toUpperCase()}</h1>
+                <p className="studentPersonalInfo">Email: {email}</p>
+                <p className="studentPersonalInfo">Comapany: {company}</p>
+                <p className="studentPersonalInfo">Skill: {skill}</p>
+                <p className="studentPersonalInfo">Average: {avgGrades}%</p>
+            </div>
         </div>
     )
 }
